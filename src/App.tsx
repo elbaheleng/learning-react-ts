@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Heading from './components/Heading'
 import Section from './components/Section'
+import Count from './components/Count'
 
 function App() {
+    const [count, setCount] = useState<number>(1)
 
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
       <Section title='Subheading'>
         This is my section.
       </Section>
+      <Count setCount={setCount}>Count is {count}</Count>
     </>
   )
 }
