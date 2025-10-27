@@ -1,21 +1,18 @@
-import { useState } from 'react'
 import './App.css'
-import Heading from './components/Heading'
-import Section from './components/Section'
-import Count from './components/Count'
-import List from './components/List'
+
+import { Route, Routes } from 'react-router-dom'
+import Hooks1 from './components/Hooks1'
+import Welcome from './components/Welcome'
 
 function App() {
-    const [count, setCount] = useState<number>(1)
 
   return (
     <>
-      <Heading title={"Hello"}/>
-      <Section title='Subheading'>
-        This is my section.
-      </Section>
-      <Count setCount={setCount}>Count is {count}</Count>
-      <List items={["Elba", "Helen", "George"]} render={(item)=> <span>{item}</span>}></List>
+      
+      <Routes>
+        <Route path='/' element={<Welcome/>}/>
+        <Route path='/hooks' element={<Hooks1 />} />
+      </Routes>
     </>
   )
 }
