@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react'
+import Button from './Button'
 
 interface User{
 id: number,
@@ -44,6 +45,11 @@ const Hooks1 = () => {
     <h3> Fibonaci of {myNum} is {result}</h3>
 
     <input ref={inputRef} type="text" />
+
+
+    <p>Typescript</p>
+    <Button backgroundColor= "red" 
+    textColor="purple" />
     </>
   )
 }
